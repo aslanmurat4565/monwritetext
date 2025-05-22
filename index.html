@@ -70,7 +70,7 @@
       if (!postUrlMeta) {
         postUrlMeta = document.createElement('meta');
         postUrlMeta.setAttribute('property', 'fc:frame:button:2:post_url');
-        document.head.appendChild(postMeta);
+        document.head.appendChild(postUrlMeta);
       }
       postUrlMeta.setAttribute('content', `https://warpcast.com/~/compose?text=${encodeURIComponent(message)}&channelKey=monad`);
     }
