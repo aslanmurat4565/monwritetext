@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MonWriteText</title>
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:image" content="https://raw.githubusercontent.com/aslanmurat4565/monwritetext/refs/heads/main/splash.jpg" />
+  <meta property="og:title" content="MonWriteText" />
+  <meta property="og:description" content="A Farcaster mini app for sharing random messages to /monad" />
+  <!-- Farcaster Frame Meta Tags -->
   <meta property="fc:frame" content="vNext" />
   <meta property="fc:frame:image" content="https://raw.githubusercontent.com/aslanmurat4565/monwritetext/refs/heads/main/splash.jpg" />
   <meta property="fc:frame:button:1" content="Generate Message" />
@@ -11,7 +16,7 @@
   <meta property="fc:frame:button:1:post_url" content="https://monwritetext.vercel.app" />
   <meta property="fc:frame:button:2" content="Share to /monad" />
   <meta property="fc:frame:button:2:action" content="link" />
-  <meta property="fc:frame:button:2:post_url" content="https://warpcast.com/~/compose?text=Share%20to%20/monad&channelKey=monad" />
+  <meta property="fc:frame:button:2:target" content="https://warpcast.com/~/compose?text=Share%20to%20/monad&channelKey=monad" />
   <style>
     body { 
       font-family: Arial, sans-serif; 
@@ -19,6 +24,7 @@
       padding: 20px; 
       background-color: #f0f0f0;
       margin: 0;
+      min-height: 100vh;
     }
     h1 { color: #333; }
     button { 
