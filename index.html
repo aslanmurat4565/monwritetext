@@ -6,7 +6,7 @@
   <meta property="fc:frame:image" content="https://via.placeholder.com/512x512?text=Monad+Mini+App" />
   <meta property="fc:frame:button:1" content="Generate Message" />
   <meta property="fc:frame:button:1:action" content="post" />
-  <meta property="fc:frame:post_url" content="https://farcaster-delta.vercel.app" />
+  <meta property="fc:frame:post_url" content="https://monwritetext.vercel.app" />
   <style>
     body { 
       font-family: Arial, sans-serif; 
@@ -70,7 +70,7 @@
       if (!postUrlMeta) {
         postUrlMeta = document.createElement('meta');
         postUrlMeta.setAttribute('property', 'fc:frame:button:2:post_url');
-        document.head.appendChild(postUrlMeta);
+        document.head.appendChild(postMeta);
       }
       postUrlMeta.setAttribute('content', `https://warpcast.com/~/compose?text=${encodeURIComponent(message)}&channelKey=monad`);
     }
