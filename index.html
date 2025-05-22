@@ -1,66 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MonWriteText</title>
+
   <!-- Open Graph Meta Tags -->
-  <meta property="og:image" content="https://raw.githubusercontent.com/aslanmurat4565/monwritetext/refs/heads/main/splash.jpg" />
   <meta property="og:title" content="MonWriteText" />
   <meta property="og:description" content="A Farcaster mini app for sharing random messages to /monad" />
+  <meta property="og:image" content="/splash.jpg" />
+
   <!-- Farcaster Frame Meta Tags -->
   <meta property="fc:frame" content="vNext" />
-  <meta property="fc:frame:image" content="https://raw.githubusercontent.com/aslanmurat4565/monwritetext/refs/heads/main/splash.jpg" />
+  <meta property="fc:frame:image" content="/splash.jpg" />
+  
+  <!-- Button 1 -->
   <meta property="fc:frame:button:1" content="Generate Message" />
   <meta property="fc:frame:button:1:action" content="post" />
   <meta property="fc:frame:button:1:post_url" content="https://monwritetext.vercel.app" />
+  
+  <!-- Button 2 -->
   <meta property="fc:frame:button:2" content="Share to /monad" />
   <meta property="fc:frame:button:2:action" content="link" />
-  <meta property="fc:frame:button:2:target" content="https://warpcast.com/~/compose?text=Share%20to%20/monad&channelKey=monad" />
+  <meta property="fc:frame:button:2:target" content="https://warpcast.com/~/compose?text=Check%20this%20out%20on%20%2Fmonad!&channelKey=monad" />
+
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      text-align: center; 
-      padding: 20px; 
+    body {
+      font-family: Arial, sans-serif;
       background-color: #f0f0f0;
       margin: 0;
-      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
     }
-    h1 { color: #333; }
-    button { 
-      padding: 15px 30px; 
-      font-size: 18px; 
-      background-color: #6200ea; 
-      color: white; 
-      border: none; 
-      border-radius: 5px; 
-      cursor: pointer; 
+    h1 {
+      color: #333;
     }
-    p { font-size: 16px; margin-top: 20px; }
+    button {
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
   </style>
 </head>
 <body>
   <h1>Farcaster Monad Mini App</h1>
   <button onclick="showMessage()">Generate Message</button>
-  <p id="message">Click to generate a message!</p>
-
-  <script>
-    try {
-      const messages = [
-        "Hey @monad-xyz, loving the testnet! 🚀 /monad",
-        "Check out my mini app on /monad! 🌟",
-        "Building on Monad is awesome! 💪 /monad",
-        "Just spun up a cool app for @monad-xyz! 🎉 /monad"
-      ];
-
-      function showMessage() {
-        const randomIndex = Math.floor(Math.random() * messages.length);
-        const selectedMessage = messages[randomIndex];
-        document.getElementById("message").innerText = selectedMessage;
-      }
-    } catch (error) {
-      console.error("Error in script:", error);
-    }
-  </script>
-</body>
-</html>
+  <p id="message">Click the button to generate a message!</p>
