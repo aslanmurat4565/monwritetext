@@ -1,0 +1,19 @@
+{
+  "frame": {
+    "version": "1",
+    "name": "MonWriteText",
+    "description": "A Farcaster mini app for sharing random messages to /monad",
+    "iconUrl": "https://via.placeholder.com/512x512?text=Monad+Mini+App",
+    "homeUrl": "https://monwritetext.vercel.app",
+    "imageUrl": "https://via.placeholder.com/512x512?text=Monad+Mini+App",
+    "buttonTitle": "Start",
+    "splashImageUrl": "https://via.placeholder.com/512x512?text=Monad+Mini+App",
+    "splashBackgroundColor": "#f0f0f0",
+    "primaryCategory": "social",
+    "tags": ["monad", "farcaster", "miniapp", "testnet"],
+    "accountAssociation": {
+      "type": "farcaster",
+      "id": "371153"
+    }
+  }
+}
