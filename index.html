@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Rastgele Mesaj</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MonWriteText</title>
   <meta property="fc:frame" content="vNext" />
-  <meta property="fc:frame:image" content="https://via.placeholder.com/512x512?text=Monad+Mini+App" />
+  <meta property="fc:frame:image" content="https://raw.githubusercontent.com/aslanmurat4565/monwritetext/refs/heads/main/splash.jpg" />
   <meta property="fc:frame:button:1" content="Generate Message" />
   <meta property="fc:frame:button:1:action" content="post" />
-  <meta property="fc:frame:post_url" content="https://monwritetext.vercel.app" />
+  <meta property="fc:frame:button:1:post_url" content="https://monwritetext.vercel.app" />
+  <meta property="fc:frame:button:2" content="Share to /monad" />
+  <meta property="fc:frame:button:2:action" content="link" />
+  <meta property="fc:frame:button:2:post_url" content="https://warpcast.com/~/compose?text=Share%20to%20/monad&channelKey=monad" />
   <style>
     body { 
       font-family: Arial, sans-serif; 
@@ -44,35 +49,6 @@
       const randomIndex = Math.floor(Math.random() * messages.length);
       const selectedMessage = messages[randomIndex];
       document.getElementById("message").innerText = selectedMessage;
-
-      // Farcaster Frame için meta tag'leri güncelle
-      updateFrameMeta(selectedMessage);
-    }
-
-    function updateFrameMeta(message) {
-      let postMeta = document.querySelector('meta[property="fc:frame:button:2"]');
-      if (!postMeta) {
-        postMeta = document.createElement('meta');
-        postMeta.setAttribute('property', 'fc:frame:button:2');
-        document.head.appendChild(postMeta);
-      }
-      postMeta.setAttribute('content', 'Share to /monad');
-
-      let actionMeta = document.querySelector('meta[property="fc:frame:button:2:action"]');
-      if (!actionMeta) {
-        actionMeta = document.createElement('meta');
-        actionMeta.setAttribute('property', 'fc:frame:button:2:action');
-        document.head.appendChild(actionMeta);
-      }
-      actionMeta.setAttribute('content', 'link');
-
-      let postUrlMeta = document.querySelector('meta[property="fc:frame:button:2:post_url"]');
-      if (!postUrlMeta) {
-        postUrlMeta = document.createElement('meta');
-        postUrlMeta.setAttribute('property', 'fc:frame:button:2:post_url');
-        document.head.appendChild(postUrlMeta);
-      }
-      postUrlMeta.setAttribute('content', `https://warpcast.com/~/compose?text=${encodeURIComponent(message)}&channelKey=monad`);
     }
   </script>
 </body>
